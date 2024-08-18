@@ -62,7 +62,7 @@ return {
       },
     },
   },
-
+  { "nvim-java/nvim-java" },
   -- add pyright to lspconfig
   {
     "neovim/nvim-lspconfig",
@@ -123,6 +123,7 @@ return {
         "bash",
         "html",
         "javascript",
+        "java",
         "json",
         "lua",
         "markdown",
