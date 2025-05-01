@@ -44,9 +44,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -194,15 +191,17 @@ exec --no-startup-id xrandr --output HDMI-0 --rotate left --left-of DP-0
 
 
 # Kill existing polybar instances
-#exec_always --no-startup-id killall -q polybar
+exec_always --no-startup-id killall -q polybar
 
 # Wait until the processes have been shut down
-#exec_always --no-startup-id while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+exec_always --no-startup-id while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar with the colorblocks theme
-#exec_always --no-startup-id /home/hrnda/.config/polybar/bitmap/launch.sh --colorblocks
+exec_always --no-startup-id /home/hrnda/.config/polybar/bitmap/launch.sh --colorblocks
 
 # Start Rofi
 bindsym $mod+Shift+d exec rofi -show run
 bindsym $mod+Tab exec rofi -show window
 
+bindsym F1 exec google-chrome
+bindsym F2 exec i3-sensible-terminal
